@@ -57,14 +57,6 @@ Risk Scoring: For every transaction, the model generates a Risk Score.
 
 Decision Threshold: A 0.5 threshold is applied to classify transactions.
 
-Final Output Example:
-text ```
--------------
-Transaction Amount: 320$
-Risk Score: 0.94
-⚠ Fraud Detected
----------------
-```
 
 ## Graphics
 
