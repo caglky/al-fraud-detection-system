@@ -47,7 +47,7 @@ al-fraud-detection-system/
 ├── main.py                    # Entry point of the application
 └── data/
     └── creditcard.csv         # Dataset file
-
+```
 
 ##  Results 
 
