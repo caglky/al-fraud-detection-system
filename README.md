@@ -1,39 +1,12 @@
-# AI-Based Credit Card Fraud Detection System
+## AI-Based Credit Card Fraud Detection System
 
-This project implements a robust end-to-end pipeline to detect fraudulent transactions using an Artificial Neural Network (ANN).
+This project is a simple machine learning applications that aims to detect fradulent credit card transactions. The goal is to understand how machine learning models can be used to solve real-world problems such as fraud detection.
 
 ## Problem 
-Credit card fraud is a significant challenge for financial institutions. The main technical hurdle is the extreme class imbalance, where fraudulent transactions represent a tiny fraction (often <1%) of the total data. This project aims to build a model that can accurately distinguish between legitimate and fraudulent activities by learning hidden patterns in transaction data.
 
-## Dataset
-The project utilizes a dataset containing transactions made by European cardholders.
+Credit card fraud is a series issue in financial systems. One of the main challenges is that fraud cases are very rare compared to normal transactions. This project focuses on building a model that can distinguish between normal and fradulent transactions. 
 
-Features: It includes 28 PCA-transformed variables (V1 to V28), 'Time', and 'Amount'.
-
-Target: The 'Class' column (1 for Fraud, 0 for Normal).
-
-Preprocessing: The data is normalized using StandardScaler to ensure the neural network treats all features with equal importance regardless of their original scale.
-
-##  Features
-- **Exploratory Data Analysis (EDA):** Visualization of class distribution, transaction amounts, and time-based patterns.
-- **Data Preprocessing:** Automated scaling using `StandardScaler` and robust data splitting (70% Train, 15% Validation, 15% Test).
-- **Deep Learning Model:** A multi-layer ANN architecture with Dropout layers to prevent overfitting.
-- **Interactive Visualization:** Training history (Loss/Accuracy) curves and Confusion Matrix.
-- **Risk Scoring:** Real-time risk estimation and reporting for individual transactions.
-
-## Model 
-
-The system uses a Sequential Neural Network architecture:
-
-Input Layer: Matches the feature count of the dataset.
-
-Hidden Layers: Three Dense layers with ReLU activation (32, 16, and 8 neurons).
-
-Regularization: Dropout layers (20%) are integrated after each hidden layer to prevent overfitting and improve generalization.
-
-Output Layer: A single neuron with Sigmoid activation to produce a risk probability score between 0 and 1.
-
-Optimization: Trained with the Adam optimizer and Binary Crossentropy loss function, supported by EarlyStopping to halt training when validation loss stops improving.
+---
 
 ##  Project Structure
 ```text
@@ -49,21 +22,58 @@ al-fraud-detection-system/
     └── creditcard.csv         # Dataset file
 ```
 
+---
+
+## Dataset
+The dataset contains transactions made by European cardholders.
+
+- Features : 28 anonymized variables (V1-V28), plus Time and Amount
+- Target  : Class (0 : Normal, 1 : Fraud)
+
+---
+
+##  What I Did
+- Performed basic data analysis (EDA)
+- Scaled the data using StandardScaler
+- Split the dataset into training and test sets
+- Build a simple Neural Network model
+- Evaluated the model using accuracy and loss
+- Visualized results (loss curevesi confusion matrix)
+
+---
+
+## Model 
+I used a simple neural network with:
+- Input layer matching feature size
+- A few Dense layers with ReLu activation
+- Dropout layers to reduce overfitting
+- Output layer with Sigmoid activation
+
+---
+
+
 ##  Results 
 
-The model is evaluated on a dedicated test set (15% of total data) that it has never seen before.
+The model is tested on unseen data:
+- Predicts whether a transaction is fraud or not
+- Outputs a probability score
+- Uses a threshold (0.5) for classification
 
-Risk Scoring: For every transaction, the model generates a Risk Score.
+---
 
-Decision Threshold: A 0.5 threshold is applied to classify transactions.
+## Visualizations
+- Training vs Valiation Loss
+- Confusion Matrix
+- Correlation Heatmap
 
+--- 
+## Motivation 
+This project was build to practice:
+- Machine learning basics
+- Data preprocessing
+- Neural Networks
+- Working with real datasets
 
-## Graphics
-
-To ensure the model's reliability, the following visualizations are generated:
-
-Loss & Accuracy Curves: Monitoring training vs. validation performance over epochs to detect underfitting or overfitting.
-
-Confusion Matrix: Providing a clear view of True Positives (caught frauds) vs. False Negatives (missed frauds).
-
-Correlation Heatmap: Identifying which features have the strongest relationship with fraudulent activity.
+--- 
+## Author
+Build as a learning project while studying computer engineering.
