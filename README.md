@@ -62,9 +62,12 @@ The model is tested on unseen data:
 ---
 
 ## Visualizations
-- Training vs Valiation Loss
+- Fraud Distribution
+- Transaction Amount Distribution
+- Time vs Process Density
+- Correlation 
+- Model Loss Curve and Model Accuracy Curve
 - Confusion Matrix
-- Correlation Heatmap
 
 --- 
 ## Motivation 
